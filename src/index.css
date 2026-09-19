@@ -45,8 +45,9 @@
 
 .site-container {
   width: calc(100% - 32px);
-  max-width: 1040px;
+  max-width: none;
   margin-inline: auto;
+}
 }
 
 @layer base {

@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white">
-      <div className="relative mx-auto flex h-[74px] w-[calc(100%-32px)] max-w-[1224px] items-center justify-between">
+      <div className="site-container relative flex h-[74px] items-center justify-between">
         <button
           type="button"
           aria-label="Toggle menu"
