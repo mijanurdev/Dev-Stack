@@ -4,42 +4,42 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="site-container grid min-h-[450px] grid-cols-1 items-center gap-10 py-14 md:grid-cols-2 lg:gap-12"
+      className="site-container grid grid-cols-1 items-center gap-6 py-10 md:min-h-[450px] md:grid-cols-2 md:gap-10 md:py-14 lg:gap-12"
     >
-      <div>
-        <h1 className="font-display text-4xl leading-[1.1] font-extrabold text-ink sm:text-[44px]">
+      <div className="min-w-0 text-center md:text-left">
+        <h1 className="font-display text-[26px] leading-[1.15] font-extrabold text-ink sm:text-4xl md:text-[44px] md:leading-[1.1]">
           Build Your Ideal
           <br />
           <span className="text-brand-gradient">Development Stack</span>
         </h1>
 
-        <p className="mt-6 max-w-[450px] font-sans text-sm leading-6 text-copy">
+        <p className="mx-auto mt-5 max-w-[450px] font-sans text-sm leading-6 text-copy md:mx-0 md:mt-6">
           Explore frontend, backend, database, and tooling options, compare them
           side by side, and put together the stack that fits your next project.
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:mt-9 md:justify-start">
           <button
             type="button"
-            className="brand-gradient cursor-pointer rounded-md px-4 py-2.5 font-sans text-xs font-semibold text-white"
+            className="brand-gradient cursor-pointer rounded-md px-3 py-3 font-sans text-[11px] font-semibold text-white sm:text-xs md:px-4 md:py-2.5"
           >
             Explore Technologies
           </button>
 
           <button
             type="button"
-            className="cursor-pointer rounded-md border border-line bg-white px-8 py-2.5 font-sans text-xs font-medium text-ink"
+            className="cursor-pointer rounded-md border border-line bg-white px-6 py-3 font-sans text-[11px] font-medium text-ink sm:text-xs md:px-8 md:py-2.5"
           >
             Learn More
           </button>
         </div>
       </div>
 
-      <div className="flex justify-center lg:justify-end">
+      <div className="flex min-w-0 justify-center md:justify-end">
         <img
           src={banner}
           alt="Development Stack Illustration"
-          className="w-full max-w-[300px] object-contain lg:max-w-[270px]"
+          className="w-full max-w-[320px] object-contain md:max-w-[300px] lg:max-w-[270px]"
         />
       </div>
     </section>
