@@ -72,16 +72,16 @@ const App = () => {
 
       <Hero />
 
-      <main id="technologies" className="site-container flex-1 py-16">
-        <h2 className="font-display text-3xl font-bold text-ink">
+      <main id="technologies" className="site-container flex-1 py-10 md:py-16">
+        <h2 className="text-center font-display text-2xl font-bold text-ink sm:text-3xl md:text-left">
           Explore the <span className="text-brand-gradient">Technologies</span>
         </h2>
 
-        <p className="mt-2 text-sm text-copy">
+        <p className="mt-2 text-center text-sm text-copy md:text-left">
           Pick one technology per category to build your ideal stack.
         </p>
 
-        <div className="mt-8 grid items-start gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(220px,1fr)]">
+        <div className="mt-5 grid items-start gap-6 md:mt-8 lg:grid-cols-[minmax(0,3fr)_minmax(220px,1fr)]">
           <div className="min-w-0">
             {loading ? (
               <div className="flex items-center gap-3 py-10">

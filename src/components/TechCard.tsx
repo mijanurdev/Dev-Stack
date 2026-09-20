@@ -15,6 +15,7 @@ const TechCard = ({ tech, stack, onAdd }: TechCardProps) => {
     Versatile: "bg-emerald-50 text-emerald-600",
     Fast: "bg-orange-50 text-orange-500",
     "Full Stack": "bg-pink-50 text-pink-600",
+    "SSR / Edge": "bg-purple-50 text-purple-600",
     Standard: "bg-emerald-50 text-emerald-600",
     "Top SQL": "bg-blue-50 text-blue-600",
     Cache: "bg-red-50 text-red-500",
@@ -27,19 +28,25 @@ const TechCard = ({ tech, stack, onAdd }: TechCardProps) => {
 
   return (
     <article
-      className={`flex h-full min-w-0 flex-col rounded-2xl border p-5 font-display shadow-sm ${
+      className={`flex h-full min-w-0 flex-col rounded-2xl border p-4 font-display shadow-sm md:p-5 ${
         isAdded ? "border-emerald-200 bg-emerald-50/20" : "border-line bg-white"
       }`}
     >
-      <div className="flex items-start justify-between gap-3">
-        <img
-          src={tech.icon}
-          alt={tech.name}
-          className="h-9 w-9 object-contain"
-        />
+      <div className="flex items-start justify-between gap-2 md:gap-3">
+        <div className="flex min-w-0 items-center gap-3 lg:block">
+          <img
+            src={tech.icon}
+            alt={tech.name}
+            className="h-8 w-8 shrink-0 object-contain md:h-9 md:w-9"
+          />
+
+          <h3 className="min-w-0 font-display text-base font-bold text-ink md:text-lg lg:mt-5">
+            {tech.name}
+          </h3>
+        </div>
 
         <span
-          className={`rounded-full px-3 py-1 text-xs font-semibold ${
+          className={`shrink-0 rounded-full px-2 py-1 text-[10px] font-semibold md:px-3 md:text-xs ${
             badgeColors[tech.badge] || "bg-surface text-ink"
           }`}
         >
@@ -47,18 +54,18 @@ const TechCard = ({ tech, stack, onAdd }: TechCardProps) => {
         </span>
       </div>
 
-      <h3 className="mt-5 text-lg font-bold text-ink">{tech.name}</h3>
-
-      <p className="mt-2 flex-1 text-sm leading-6 text-copy">
+      <p className="mt-3 flex-1 text-xs leading-5 text-copy md:mt-2 md:text-sm md:leading-6">
         {tech.description}
       </p>
 
-      <div className="mt-5 flex items-center justify-between gap-2 border-t border-line pt-3">
-        <span className="rounded bg-surface px-2 py-1 text-[11px] text-copy">
+      <div className="mt-3 flex items-center justify-between gap-1 border-t border-line pt-2 md:mt-5 md:gap-2 md:pt-3">
+        <span className="rounded bg-surface px-2 py-1 text-[10px] text-copy sm:text-[11px]">
           {tech.category}
         </span>
 
-        <span className="text-[11px] text-copy">{tech.difficulty}</span>
+        <span className="text-[10px] text-copy sm:text-[11px]">
+          {tech.difficulty}
+        </span>
 
         <span className="whitespace-nowrap text-xs font-semibold text-star">
           ★ {tech.rating}
@@ -69,7 +76,7 @@ const TechCard = ({ tech, stack, onAdd }: TechCardProps) => {
         type="button"
         disabled={isAdded}
         onClick={() => onAdd(tech)}
-        className="mt-5 flex w-full items-center justify-center gap-2 rounded-lg bg-ink px-3 py-3 text-sm font-medium text-white hover:bg-ink-hover disabled:cursor-not-allowed disabled:bg-[#F5F8FF] disabled:text-[#8B96A8]"
+        className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-ink px-3 py-2.5 text-sm font-medium text-white hover:bg-ink-hover disabled:cursor-not-allowed disabled:bg-[#F5F8FF] disabled:text-[#8B96A8] md:mt-5 md:py-3"
       >
         {isAdded ? (
           <>

@@ -15,7 +15,7 @@ const Footer = () => {
             </h2>
           </div>
 
-          <p className="mx-auto mt-4 max-w-[360px] text-sm leading-6 text-copy md:mx-0 md:max-w-[300px]">
+          <p className="mx-auto mt-4 max-w-[360px] text-sm leading-6 text-copy md:mx-0 md:max-w-75">
             Curated tools, technologies, and resources for developers building
             modern software.
           </p>
