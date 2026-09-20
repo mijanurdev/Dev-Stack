@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white">
-      <div className="site-container relative flex h-[74px] items-center justify-between">
+      <div className="site-container relative flex h-18.5 items-center justify-between">
         <button
           type="button"
           aria-label="Toggle menu"
@@ -21,7 +21,7 @@ const Navbar = () => {
         </button>
 
         <div className="hidden shrink-0 items-center gap-3 lg:flex">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-pink to-brand-violet text-xs font-semibold text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br from-brand-pink to-brand-violet text-xs font-semibold text-white">
             DS
           </div>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
 
         <div className="absolute left-1/2 flex -translate-x-1/2 items-center justify-center lg:hidden">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-pink to-brand-violet text-xs font-semibold text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br from-brand-pink to-brand-violet text-xs font-semibold text-white">
             DS
           </div>
         </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
         aria-label="Mobile navigation"
         className={`${menuOpen ? "block" : "hidden"} border-t border-line bg-white lg:hidden`}
       >
-        <div className="mx-auto flex max-w-[1224px] flex-col gap-1 px-4 py-4">
+        <div className="mx-auto flex max-w-306 flex-col gap-1 px-4 py-4">
           {navLinks.map((link) => (
             <button
               key={link}

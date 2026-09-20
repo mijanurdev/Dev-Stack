@@ -3,8 +3,7 @@ import { toast } from "react-toastify";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import TechList from "./components/TechList";
-import Sidebar from "./components/Sidebar";
+import MainLayout from "./components/MainLayout";
 import Footer from "./components/Footer";
 
 import type { Technology } from "./types";
@@ -46,7 +45,6 @@ const App = () => {
     }
 
     setStack([...stack, tech]);
-
     toast.success(`${tech.name} added to stack!`);
   };
 
@@ -67,46 +65,20 @@ const App = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-page text-ink">
+    <div className="page-shell flex min-h-screen flex-col bg-page text-ink">
       <Navbar />
 
       <Hero />
 
-      <main id="technologies" className="site-container flex-1 py-10 md:py-16">
-        <h2 className="text-center font-display text-2xl font-bold text-ink sm:text-3xl md:text-left">
-          Explore the <span className="text-brand-gradient">Technologies</span>
-        </h2>
-
-        <p className="mt-2 text-center text-sm text-copy md:text-left">
-          Pick one technology per category to build your ideal stack.
-        </p>
-
-        <div className="mt-5 grid items-start gap-6 md:mt-8 lg:grid-cols-[minmax(0,3fr)_minmax(220px,1fr)]">
-          <div className="min-w-0">
-            {loading ? (
-              <div className="flex items-center gap-3 py-10">
-                <span className="loading loading-spinner text-brand-pink"></span>
-
-                <p>Loading technologies...</p>
-              </div>
-            ) : error ? (
-              <p className="py-10 text-danger">{error}</p>
-            ) : (
-              <TechList
-                technologies={technologies}
-                stack={stack}
-                onAdd={handleAddToStack}
-              />
-            )}
-          </div>
-
-          <Sidebar
-            stack={stack}
-            onRemove={handleRemove}
-            onRemoveAll={handleRemoveAll}
-          />
-        </div>
-      </main>
+      <MainLayout
+        technologies={technologies}
+        stack={stack}
+        loading={loading}
+        error={error}
+        onAdd={handleAddToStack}
+        onRemove={handleRemove}
+        onRemoveAll={handleRemoveAll}
+      />
 
       <Footer />
     </div>

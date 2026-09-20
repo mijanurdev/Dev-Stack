@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="site-container grid grid-cols-1 items-center gap-6 py-10 md:min-h-[450px] md:grid-cols-2 md:gap-10 md:py-14 lg:gap-12"
+      className="site-container grid grid-cols-1 items-center gap-6 py-10 md:min-h-112.5 md:grid-cols-2 md:gap-10 md:py-14 lg:gap-12"
     >
       <div className="min-w-0 text-center md:text-left">
         <h1 className="font-display text-[26px] leading-[1.15] font-extrabold text-ink sm:text-4xl md:text-[44px] md:leading-[1.1]">
@@ -13,7 +13,7 @@ const Hero = () => {
           <span className="text-brand-gradient">Development Stack</span>
         </h1>
 
-        <p className="mx-auto mt-5 max-w-[450px] font-sans text-sm leading-6 text-copy md:mx-0 md:mt-6">
+        <p className="mx-auto mt-5 max-w-112.5 font-sans text-sm leading-6 text-copy md:mx-0 md:mt-6">
           Explore frontend, backend, database, and tooling options, compare them
           side by side, and put together the stack that fits your next project.
         </p>
@@ -39,7 +39,7 @@ const Hero = () => {
         <img
           src={banner}
           alt="Development Stack Illustration"
-          className="w-full max-w-[320px] object-contain md:max-w-[300px] lg:max-w-[270px]"
+          className="w-full max-w-[320px] object-contain md:max-w-75 lg:max-w-67.5"
         />
       </div>
     </section>

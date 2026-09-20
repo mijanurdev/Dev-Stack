@@ -43,12 +43,23 @@
   color: transparent;
 }
 
-.site-container {
+.page-shell {
   width: calc(100% - 32px);
-  max-width: none;
+  max-width: 1440px;
   margin-inline: auto;
 }
 
+.site-container {
+  width: calc(100% - 32px);
+  max-width: 1224px;
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: 100%;
+  }
+}
 
 @layer base {
   html {

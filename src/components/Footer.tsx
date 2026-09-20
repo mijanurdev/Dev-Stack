@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="site-container grid grid-cols-1 gap-10 py-10 md:grid-cols-4 md:py-12 lg:grid-cols-[1.5fr_repeat(3,0.833fr)]">
         <div className="text-center md:text-left">
           <div className="flex items-center justify-center gap-2 md:justify-start">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-pink to-brand-violet text-xs font-bold text-white">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br from-brand-pink to-brand-violet text-xs font-bold text-white">
               DS
             </div>
 
@@ -15,7 +15,7 @@ const Footer = () => {
             </h2>
           </div>
 
-          <p className="mx-auto mt-4 max-w-[360px] text-sm leading-6 text-copy md:mx-0 md:max-w-75">
+          <p className="mx-auto mt-4 max-w-90 text-sm leading-6 text-copy md:mx-0 md:max-w-75">
             Curated tools, technologies, and resources for developers building
             modern software.
           </p>
