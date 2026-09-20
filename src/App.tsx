@@ -36,6 +36,12 @@ const App = () => {
     loadData();
   }, []);
 
+  useEffect(() => {
+    if (!loading) {
+      document.getElementById("initial-loader")?.remove();
+    }
+  }, [loading]);
+
   const handleAddToStack = (tech: Technology) => {
     const isAdded = stack.some((item) => item.id === tech.id);
 

@@ -1,10 +1,26 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
+import { toast } from "react-toastify";
+
 const navLinks = ["Home", "Technologies", "Projects", "About", "Contact"];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNavigation = (link: string) => {
+    if (link === "Home" || link === "Technologies") {
+      const section = document.getElementById(link.toLowerCase());
+
+      section?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      toast.info(`${link} page is not available yet.`);
+    }
+
+    setMenuOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white">
@@ -41,6 +57,7 @@ const Navbar = () => {
             <button
               key={link}
               type="button"
+              onClick={() => handleNavigation(link)}
               className={`cursor-pointer font-sans text-sm font-medium ${
                 link === "Home" ? "text-brand-pink" : "text-ink"
               }`}
@@ -53,6 +70,7 @@ const Navbar = () => {
         <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-5 lg:ml-0">
           <button
             type="button"
+            onClick={() => toast.info("Sign In is not available yet.")}
             className="cursor-pointer font-sans text-xs font-medium text-ink sm:text-sm"
           >
             Sign In
@@ -60,6 +78,7 @@ const Navbar = () => {
 
           <button
             type="button"
+            onClick={() => toast.info("Sign Up is not available yet.")}
             className="cursor-pointer rounded-full bg-[#D91383] px-3 py-2 font-sans text-xs font-medium text-white shadow-sm sm:px-5 sm:py-2.5 sm:text-sm"
           >
             Sign Up
@@ -77,6 +96,7 @@ const Navbar = () => {
             <button
               key={link}
               type="button"
+              onClick={() => handleNavigation(link)}
               className={`cursor-pointer rounded-lg px-3 py-3 text-left font-sans text-sm font-medium ${
                 link === "Home" ? "text-brand-pink" : "text-ink"
               }`}

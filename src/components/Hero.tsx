@@ -21,6 +21,11 @@ const Hero = () => {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:mt-9 md:justify-start">
           <button
             type="button"
+            onClick={() =>
+              document.getElementById("technologies")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }
             className="brand-gradient cursor-pointer rounded-md px-3 py-3 font-sans text-[11px] font-semibold text-white sm:text-xs md:px-4 md:py-2.5"
           >
             Explore Technologies
@@ -28,6 +33,11 @@ const Hero = () => {
 
           <button
             type="button"
+            onClick={() => {
+              document.getElementById("about")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
             className="cursor-pointer rounded-md border border-line bg-white px-6 py-3 font-sans text-[11px] font-medium text-ink sm:text-xs md:px-8 md:py-2.5"
           >
             Learn More

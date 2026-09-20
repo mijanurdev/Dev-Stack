@@ -37,7 +37,7 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Full Stack"
+    "badge": "SSR / Edge"
   },
   {
     "id": "nodejs",
