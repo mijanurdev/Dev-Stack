@@ -5,16 +5,14 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechList from "./components/TechList";
 import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 import type { Technology } from "./types";
 
 const App = () => {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
-
   const [stack, setStack] = useState<Technology[]>([]);
-
   const [loading, setLoading] = useState(true);
-
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -44,7 +42,6 @@ const App = () => {
 
     if (isAdded) {
       toast.warning("Technology already added!");
-
       return;
     }
 
@@ -70,12 +67,12 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-page text-ink">
+    <div className="flex min-h-screen flex-col bg-page text-ink">
       <Navbar />
 
       <Hero />
 
-      <main id="technologies" className="site-container py-16">
+      <main id="technologies" className="site-container flex-1 py-16">
         <h2 className="font-display text-3xl font-bold text-ink">
           Explore the <span className="text-brand-gradient">Technologies</span>
         </h2>
@@ -110,6 +107,8 @@ const App = () => {
           />
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };
